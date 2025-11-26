@@ -1,4 +1,5 @@
-# BoxAuth
+<img width="3440" height="1440" alt="boxauth" src="https://github.com/user-attachments/assets/02b5908e-52f9-4b77-894a-1820fc3bdd06" />
+⠀
 
 BoxAuth is a lightweight Java-based wrapper designed to launch a Minecraft server with a custom authentication backend using Authlib Injector. It automates configuration, dependency retrieval, and process management, making it suitable for environments such as Pterodactyl, Docker, or standalone server hosts.
 
