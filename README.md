@@ -1,10 +1,5 @@
-<img width="3440" height="1440" alt="sessioncore" src="https://github.com/user-attachments/assets/225f5eff-24b2-4375-a091-df9c3c4a8a9d" />
-&nbsp;
 
-
-SessionCore is a lightweight Java-based wrapper designed to launch a Minecraft server with a custom authentication backend using Authlib Injector. It automates configuration, dependency retrieval, and process management, making it suitable for environments such as Pterodactyl, Docker, or standalone server hosts.
-
----
+<img width="1280" height="320" alt="bannerforgithub" src="https://github.com/user-attachments/assets/9dcdfe44-b3d2-480e-8c92-533c100500dc" />
 
 ## Features
 
