@@ -1,7 +1,8 @@
-<img width="3440" height="1440" alt="boxauth" src="https://github.com/user-attachments/assets/02b5908e-52f9-4b77-894a-1820fc3bdd06" />
-⠀
+<img width="3440" height="1440" alt="sessioncore" src="https://github.com/user-attachments/assets/225f5eff-24b2-4375-a091-df9c3c4a8a9d" />
+&nbsp;
 
-BoxAuth is a lightweight Java-based wrapper designed to launch a Minecraft server with a custom authentication backend using Authlib Injector. It automates configuration, dependency retrieval, and process management, making it suitable for environments such as Pterodactyl, Docker, or standalone server hosts.
+
+SessionCore is a lightweight Java-based wrapper designed to launch a Minecraft server with a custom authentication backend using Authlib Injector. It automates configuration, dependency retrieval, and process management, making it suitable for environments such as Pterodactyl, Docker, or standalone server hosts.
 
 ---
 
@@ -9,24 +10,24 @@ BoxAuth is a lightweight Java-based wrapper designed to launch a Minecraft serve
 
 ### • Interactive Terminal Setup
 
-On first launch, BoxAuth guides the user through a simple TUI (text-based installer):
+On first launch, SessionCore guides the user through a simple TUI (text-based installer):
 
 * Prompts for the custom authentication server URL
 * Detects available `.jar` files in the working directory
-* Allows selecting a server executable (excluding BoxAuth.jar)
-* Generates a `boxauth.yml` configuration file
+* Allows selecting a server executable (excluding SessionCore.jar)
+* Generates a `SessionCore.yml` configuration file
 
 ### • Automatic Authlib Injector Download
 
-BoxAuth automatically downloads the official Authlib Injector (v1.2.6) from GitHub Releases.
-The binary is not bundled inside BoxAuth and is retrieved at runtime to ensure authenticity.
+SessionCore automatically downloads the official Authlib Injector (v1.2.6) from GitHub Releases.
+The binary is not bundled inside SessionCore and is retrieved at runtime to ensure authenticity.
 
 ### • Configuration Management
 
-BoxAuth creates and maintains:
+SessionCore creates and maintains:
 
 ```
-boxauth.yml
+SessionCore.yml
 ```
 
 Example:
@@ -36,26 +37,26 @@ authserver: "https://example.com"
 serverfile: "server.jar"
 ```
 
-If the configured server jar is missing, BoxAuth will re-run the JAR selection interface.
+If the configured server jar is missing, SessionCore will re-run the JAR selection interface.
 
 ### • Full Console Passthrough
 
-All Minecraft server output is streamed to the console running BoxAuth, along with input forwarding for commands typed by the user.
+All Minecraft server output is streamed to the console running SessionCore, along with input forwarding for commands typed by the user.
 
 ### • Logging
 
-BoxAuth logs all server output to:
+SessionCore logs all server output to:
 
 ```
-boxauth-server.log
+SessionCore-server.log
 ```
 
 ### • Restart Logic
 
 The wrapper monitors server exit codes:
 
-* Exit code `0` → BoxAuth shuts down
-* Non-zero exit code → BoxAuth automatically restarts the server
+* Exit code `0` → SessionCore shuts down
+* Non-zero exit code → SessionCore automatically restarts the server
 
 This behavior is designed for hosting environments where uptime and crash recovery are required.
 
@@ -70,7 +71,7 @@ This behavior is designed for hosting environments where uptime and crash recove
 ## Requirements
 
 * Java 17 or higher
-* A Minecraft server `.jar` file placed in the same directory as BoxAuth
+* A Minecraft server `.jar` file placed in the same directory as SessionCore
 * Internet connection for automatic dependency download
 
 ---
@@ -78,21 +79,21 @@ This behavior is designed for hosting environments where uptime and crash recove
 ## Installation
 
 1. Download the latest release from the GitHub Releases page.
-2. Place `BoxAuth.jar` in the same directory as your Minecraft server `.jar`.
+2. Place `SessionCore.jar` in the same directory as your Minecraft server `.jar`.
 3. Run:
 
 ```
-java -jar BoxAuth.jar
+java -jar SessionCore.jar
 ```
 
 4. Follow the on-screen setup instructions.
 
-BoxAuth will automatically create:
+SessionCore will automatically create:
 
-* `boxauth.yml`
+* `SessionCore.yml`
 * `meta/` directory
 * `authlibinjector.jar`
-* `boxauth-server.log`
+* `SessionCore-server.log`
 
 ---
 
@@ -101,22 +102,22 @@ BoxAuth will automatically create:
 ### Start the server:
 
 ```
-java -jar BoxAuth.jar
+java -jar SessionCore.jar
 ```
 
 ### During runtime:
 
 * Type commands directly into the console; they will be forwarded to the Minecraft server.
-* Server logs will appear both in the console and in `boxauth-server.log`.
+* Server logs will appear both in the console and in `SessionCore-server.log`.
 
 ---
 
 ## File Structure (Generated at Runtime)
 
 ```
-BoxAuth.jar
-boxauth.yml
-boxauth-server.log
+SessionCore.jar
+SessionCore.yml
+SessionCore-server.log
 meta/
  └── authlibinjector.jar
 server.jar        (your selected Minecraft server file)
@@ -126,7 +127,7 @@ server.jar        (your selected Minecraft server file)
 
 ## Supported Server Types
 
-BoxAuth works with any standard Java-based Minecraft server, including:
+SessionCore works with any standard Java-based Minecraft server, including:
 
 * Paper
 * Purpur
@@ -140,15 +141,15 @@ BoxAuth works with any standard Java-based Minecraft server, including:
 
 ## Legal Notice
 
-BoxAuth does **not** redistribute Authlib Injector.
+SessionCore does **not** redistribute Authlib Injector.
 Instead, it downloads the **official unmodified binary** directly from the Authlib Injector GitHub repository, in accordance with its AGPL license and additional exception permitting usage as a Java Agent.
 
-Users remain responsible for complying with licensing requirements for any external tools or software used alongside BoxAuth.
+Users remain responsible for complying with licensing requirements for any external tools or software used alongside SessionCore.
 
 ---
 
 ## Disclaimer
 
-BoxAuth is provided without warranty.
+SessionCore is provided without warranty.
 Use at your own risk.
 Ensure you comply with your hosting provider’s terms of service before using custom authentication servers.
