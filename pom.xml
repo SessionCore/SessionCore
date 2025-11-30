@@ -1,9 +1,9 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.boxauth</groupId>
-    <artifactId>BoxAuth</artifactId>
-    <version>1.0</version>
+    <groupId>dev.sessioncore</groupId>
+    <artifactId>SessionCore</artifactId>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -36,7 +36,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>dev.boxauth.BoxAuth</mainClass>
+                            <mainClass>dev.sessioncore.SessionCore</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
